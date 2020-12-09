@@ -1,42 +1,67 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+import logoNS from "../images/logo-ns.png"
+
+
+const StyledHeader = styled.div`
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  background-color: #F8F5F3;
+  top: 0px;
+  font-family: "Cairo";
+  z-index: 10;
+`
+export const StyledContainer = styled.div`
+  width: 1640px;
+  min-width: 1640px;
+  margin: 0 auto;
+  @media (max-width: 1440px) {
+      width: 1280px;
+      min-width: 1280px;
+  }
+  @media (max-width: 1280px) {
+      width: 976px;
+      min-width: 976px;
+  }
+  @media (max-width: 976px) {
+      width: 768px;
+      min-width: 768px;
+  }
+`
+
+const StyledInnerHeader = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  & img {
+    margin-bottom: 0;
+    width: 64%;
+  }
+
+  & a {
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #000;
+    }
+`
+const Header = () => (
+ <StyledHeader>
+   <StyledContainer>
+     <StyledInnerHeader>
+          <Link className="link" to="/">Work</Link>
+          <Link to="/"><img src={logoNS} alt={logoNS}/></Link>
+          <Link to="/">Contact</Link>
+      </StyledInnerHeader>
+   </StyledContainer>
+ </StyledHeader>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

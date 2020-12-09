@@ -47,7 +47,7 @@ const StyledInnerHeader = styled.nav`
   & a {
       margin: 0 20px;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 18px;
       color: #000;
     }
 `
@@ -55,9 +55,9 @@ const Header = () => (
  <StyledHeader>
    <StyledContainer>
      <StyledInnerHeader>
-          <Link className="link" to="/">Work</Link>
+          <Link className="link" to="/">WORK</Link>
           <Link to="/"><img src={logoNS} alt={logoNS}/></Link>
-          <Link to="/">Contact</Link>
+          <Link to="/">CONTACT</Link>
       </StyledInnerHeader>
    </StyledContainer>
  </StyledHeader>

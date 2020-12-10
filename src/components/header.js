@@ -8,10 +8,11 @@ import logoNS from "../images/logo-ns.png"
 
 const StyledHeader = styled.div`
   height: 80px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   background-color: #F8F5F3;
   top: 0px;
+  right: 0px;
   font-family: "Cairo";
   z-index: 10;
 `
@@ -55,7 +56,7 @@ const Header = () => (
  <StyledHeader>
    <StyledContainer>
      <StyledInnerHeader>
-          <Link className="link" to="/">WORK</Link>
+          <Link to="/">WORK</Link>
           <Link to="/"><img src={logoNS} alt={logoNS}/></Link>
           <Link to="/">CONTACT</Link>
       </StyledInnerHeader>

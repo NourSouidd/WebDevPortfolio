@@ -1,16 +1,16 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+// import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
 
-import logoNS from "../images/logo-ns.png"
+import logoNS from "../images/logo.png"
 
 
 const StyledHeader = styled.div`
   height: 80px;
   width: 100vw;
   position: fixed;
-  background-color: #F8F5F3;
+  background-color: #000;
   top: 0px;
   right: 0px;
   font-family: "Cairo";
@@ -48,17 +48,20 @@ const StyledInnerHeader = styled.nav`
   & a {
       margin: 0 20px;
       text-decoration: none;
-      font-size: 18px;
-      color: #000;
+      font-size: 16px;
+      color: #F8F5F3;
     }
 `
 const Header = () => (
  <StyledHeader>
    <StyledContainer>
      <StyledInnerHeader>
-          <Link to="/">WORK</Link>
           <Link to="/"><img src={logoNS} alt={logoNS}/></Link>
-          <Link to="/">CONTACT</Link>
+          <div>
+            <Link to="/">STORY</Link>
+            <Link to="/">WORK</Link>
+            <Link to="/">PLAYGROUND</Link>
+          </div>
       </StyledInnerHeader>
    </StyledContainer>
  </StyledHeader>

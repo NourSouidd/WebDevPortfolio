@@ -58,7 +58,7 @@ const Header = () => (
      <StyledInnerHeader>
           <Link to="/"><img src={logoNS} alt={logoNS}/></Link>
           <div>
-            <Link to="/">STORY</Link>
+            <Link to="/story">STORY</Link>
             <Link to="/">WORK</Link>
             <Link to="/">PLAYGROUND</Link>
           </div>

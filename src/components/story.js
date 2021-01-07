@@ -23,6 +23,8 @@ const StyledInnerStory = styled.div`
   img {
     width: 30%;
     height: 50%;
+    margin-top: 10px;
+    border-radius: 8px;
   }
   div {
     width: 40%;

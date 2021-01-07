@@ -25,7 +25,9 @@ const StyledInnerStory = styled.div`
     height: 50%;
   }
   div {
-    width: 50%;
+    width: 40%;
+    font-weight: 200;
+    font-size: 30px;
   }
 `
 
